@@ -7,3 +7,6 @@
 [submodule "ADC"]
 	path = ADC
 	url = https://github.com/Vilbrequin/ADC.git
+[submodule "PWM"]
+	path = PWM
+	url = https://github.com/Vilbrequin/PWM.git
