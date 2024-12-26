@@ -13,3 +13,6 @@
 [submodule "ICU"]
 	path = ICU
 	url = https://github.com/Vilbrequin/ICU.git
+[submodule "OCU"]
+	path = OCU
+	url = https://github.com/Vilbrequin/OCU.git
