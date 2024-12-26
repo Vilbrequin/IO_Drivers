@@ -4,3 +4,6 @@
 [submodule "DIO"]
 	path = DIO
 	url = https://github.com/Vilbrequin/DIO.git
+[submodule "ADC"]
+	path = ADC
+	url = https://github.com/Vilbrequin/ADC.git
