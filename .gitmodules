@@ -10,3 +10,6 @@
 [submodule "PWM"]
 	path = PWM
 	url = https://github.com/Vilbrequin/PWM.git
+[submodule "ICU"]
+	path = ICU
+	url = https://github.com/Vilbrequin/ICU.git
