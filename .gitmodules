@@ -16,3 +16,6 @@
 [submodule "OCU"]
 	path = OCU
 	url = https://github.com/Vilbrequin/OCU.git
+[submodule "DET"]
+	path = DET
+	url = https://github.com/Vilbrequin/DET.git
