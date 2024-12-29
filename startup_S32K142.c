@@ -307,6 +307,13 @@ const uint32_t VectorTable[] __attribute__ ((section (".isr_vector"))) = {
     (uint32_t)FTM3_Ovf_Reload_IRQHandler                    
 };
 
+const uint32_t FlashConfig[] __attribute__ ((section (".FlashConfig"))) = {
+    (uint32_t)0xFFFFFFFF,    /* 8 bytes backdoor comparison key           */
+    (uint32_t)0xFFFFFFFF,    /*                                           */
+    (uint32_t)0xFFFFFFFF,    /* 4 bytes program flash protection bytes    */
+    (uint32_t)0xFFFF7FFE     /* FDPROT:FEPROT:FOPT:FSEC(0xFE = unsecured) */
+};
+
 void Reset_Handler(void){
 
     uint32_t _data_size = &_edata - &_sdata;

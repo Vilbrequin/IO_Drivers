@@ -16,7 +16,9 @@ _Min_Stack_Size = 0x00000400;
 
 MEMORY 
 {
-    PROGRAM_FLASH (rx) : ORIGIN = 0x00000000, LENGTH = 256K
+    FLASH_INTERRUPTS (rx) : ORIGIN = 0x00000000, LENGTH = 1K
+    FLASH_CONFIG (rx) : ORIGIN = 0x00000400, LENGTH = 16
+    PROGRAM_FLASH (rx) : ORIGIN = 0x00000410, LENGTH = 0x0003FBF0 /* 40000(256KB) - 400(1KB) - 16 */
 
     SRAM_L (rwx) : ORIGIN = 0x1FFFC000, LENGTH = 16K /* extends downwards (0x1FFFFFFF SRAM_L Start Address) */
     SRAM_U (rwx) : ORIGIN = 0x20000000, LENGTH = 12K /* extends upwards (0x20000000 SRAM_U Start Address) */
@@ -29,8 +31,15 @@ SECTIONS
         . = ALIGN(4);
         KEEP(*(.isr_vector))
         . = ALIGN(4);
-    } > PROGRAM_FLASH
+    } > FLASH_INTERRUPTS
     
+    .flash_config :
+    {
+        . = ALIGN(4);
+        KEEP(*(.FlashConfig))
+        . = ALIGN(4);
+    } > FLASH_CONFIG
+
     .text : 
     {
         . = ALIGN(4);
