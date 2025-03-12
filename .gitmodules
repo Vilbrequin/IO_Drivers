@@ -19,3 +19,6 @@
 [submodule "DET"]
 	path = DET
 	url = https://github.com/Vilbrequin/DET.git
+[submodule "EcuM"]
+	path = EcuM
+	url = https://github.com/Vilbrequin/EcuM.git
